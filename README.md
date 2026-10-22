@@ -2,6 +2,13 @@
 
 The goal of this lab is to get you comfortable with **Amazon S3** object storage, building on what you have learned about the command line, AWS accounts, and scripting. You will stage a collection of 100 books from [Project Gutenberg](https://www.gutenberg.org/) in a **public** bucket that anyone can browse in a web browser, and share a single book from a **private** bucket with a time-limited presigned URL.
 
+## My S3 Buckets
+
+   - Public book collection: https://public-zqu3wh.s3.amazonaws.com/index.html
+   - Private book (Dracula, presigned for 604800 seconds): [pg345.txt](https://secret-zqu3wh.s3.amazonaws.com/pg345.txt?AWSAccessKeyId=ASIA4VAVDCVVJ2OGIBZB&Signature=6ns0sEg1l04o1K%2BdkRi6ker6cx4%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEKH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIBs6msAO05inJuYD%2B3wdSf7ab9ryh8cfwDWHtLORoJihAiEA5Wh0C4QXDTvzBOja8LTF8HPdTv6M%2FKhODJj8Q32yKZYqrQIIahAAGgw4Njk3NzUxMTk3MjIiDLlh5okEMiCyNoMjpyqKAuMi3z8zOdxGNp1jpSDXaFbkn1YsaBOAkZvu15kUIcOkVcA61lM3Od9mANBDt9n1uYae2W6D9FMMC%2FHCKCMM51StklPTfLa5OkcR9hMFXvMmtjfnyxzFyfBW6%2BVpyNnhuyLuQ0n69RiYhiQx%2FqyiP5Ex63Ub6LWHWYe4AfNEvNClZVlS84i8XKOKjvaPfQ1848pQsQmIv0u3ooe60%2BA3nxRPiMLtJGm0v%2B%2BHSwB0%2B0Dv660zZNmKb9KC9DGpx0EOrPaRrdUhZ31gMDmtHBwv8UBM4ASrFmjBvbmRJm3obit4%2F3ChwiYXOk%2BbOBh2UQKYdEV3kWJ8FBSyW9%2F8S12ppIQCKXVOTOl2DqyPMNy35dYGOp0BFEwi4etzP2%2Bao2wXE%2Bi8%2FXvVyLTedpfNduRbIxMPXZdavxnHXe%2FiW3rVFjJqeGkac3pzV9Uwo60XrbMq8d9kO%2FkxYNlppNK3YR8wmpx%2BGYTFlPqqzRFI8UVvxAGV3Xq4a6AdZhoTteerttw8wgj56q8RyG9Cx8FU1urKrxrbX1lLokCfwC8bron19llhkUnMxR%2FVXGm0K7D1gISYkA%3D%3D&Expires=1793235757)
+
+   I'd choose a public bucket to give anyone access to read anything I want open. I'd use a presigned URL to keep my bucket private but give a specific person access to my data.
+
 > **Note:** Review and adhere to the [coding best practices](https://github.com/ksiller/DS2022/blob/main/best-practices.md) where applicable when developing your scripts. The Python script in Task 1 and the bash script in Task 2 should follow the same scripting practices you used in [Lab 03](https://github.com/ksiller/lab-03-scripting), [Lab 04](https://github.com/ksiller/lab-04-sql), and [Lab 05](https://github.com/ksiller/lab-05-nosql): a shebang, functions with docstrings, comments, logging, `try`/`except` around calls to external services (AWS and web downloads), and an `if __name__ == "__main__":` block in Python, and `set -euo pipefail`, quoted variables, and validated positional arguments in bash. **Never put your AWS credentials in a script or commit them to GitHub.**
 
 ## Learning goals
